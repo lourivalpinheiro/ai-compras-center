@@ -1,6 +1,5 @@
 import streamlit as st
 from classes.ui.header import HeaderMenu
-from classes.ui.footer import Footer
 from langchain.memory import ConversationBufferMemory
 from langchain_openai import ChatOpenAI
 
@@ -38,7 +37,7 @@ def side_bar():
     with st.sidebar:
         if st.button("Inicializar IA", use_container_width=True):
             carrega_modelo()
-        Footer().footer()
+        
 
 
 def main():
