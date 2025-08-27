@@ -1,0 +1,6 @@
+streamlit~=1.48.1
+pandas~=2.3.1
+plotly~=6.3.0
+st-gsheets-connection
+langchain~=0.3.27
+langchain-openai
