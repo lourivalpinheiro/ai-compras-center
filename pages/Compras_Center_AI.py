@@ -12,7 +12,7 @@ def carrega_modelo():
     st.session_state['chat'] = chat
 
 def chat_page():
-    st.set_page_config("Compras Center AI", icon="🤖", layout="centered")
+    st.set_page_config("Compras Center AI", layout="centered")
     HeaderMenu.hide_menu()
     st.header(":material/robot_2: COMPRAS CENTER AI", divider=True)
     # if st.button("Inicializar IA", use_container_width=True):
