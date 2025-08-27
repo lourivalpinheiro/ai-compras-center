@@ -42,8 +42,7 @@ def side_bar():
 
 def main():
     chat_page()
-    with st.sidebar:
-        side_bar()
+    side_bar()
 
 if __name__ == '__main__':
     main()
