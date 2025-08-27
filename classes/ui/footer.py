@@ -32,7 +32,7 @@ class Footer:
        </style>
 
        <div class="footer-custom">
-           © <strong>Lourival Pinheiro<strong/> - Todos os direitos reservados
+           © <strong>ANP SAB 10H<strong/> - Todos os direitos reservados
        </div>
        """
 

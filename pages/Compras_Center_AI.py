@@ -1,4 +1,6 @@
 import streamlit as st
+from classes.ui.header import HeaderMenu
+from classes.ui.footer import Footer
 from langchain.memory import ConversationBufferMemory
 from langchain_openai import ChatOpenAI
 
@@ -12,6 +14,7 @@ def carrega_modelo():
 
 def chat_page():
     st.header("🤖 COMPRAS CENTER AI", divider=True)
+    HeaderMenu().load_header_menu()
 
     chat_model = st.session_state.get('chat')
     memoria = st.session_state.get('memoria', memory)
@@ -34,6 +37,7 @@ def side_bar():
     with st.sidebar:
         if st.button("Inicializar IA", use_container_width=True):
             carrega_modelo()
+        Footer().load_footer()
 
 
 def main():
