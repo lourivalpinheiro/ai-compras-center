@@ -12,7 +12,7 @@ import pandas as pd
 #endregion
 
 #region PAGE CONFIGURATION
-Pages(name="Compras Center", icon="📊", page_layout="wide")
+st.set_page_config(page_title="Compras Center", page_icon="📊", layout="wide",  initial_sidebar_state="expanded")
 HeaderMenu.hide_menu()
 #endregion
 
