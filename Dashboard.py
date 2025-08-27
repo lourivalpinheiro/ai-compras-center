@@ -6,6 +6,7 @@ from classes.ui.textelement import TextElement
 from classes.ui.metrics import DisplayMetrics
 from classes.data.fetchdata import DataConnection
 from classes.ui.data import PlotData
+from streamlit import switch_page
 import streamlit as st
 import pandas as pd
 #endregion
@@ -40,7 +41,7 @@ with tab1:
     TextElement.set_title("📊 Análise da planilha de compras")
     TextElement.set_caption("**EMPRESA:** MATERIAL DE CONSTRUÇÃO LTDA")
     TextElement.write_text("---")
-    #endregion
+    #endregion    
 
     #region FILTERS
     col1, col2, col3 = st.columns(3)

@@ -1,5 +1,6 @@
 # Importing necessary modules
 import streamlit as st
+from streamlit import switch_page
 
 # Header menu class
 class HeaderMenu:
@@ -19,7 +20,7 @@ class HeaderMenu:
                     <style>
                     #MainMenu {visibility: hidden;}
                     footer {visibility: hidden;}
-                    
+                    header {visibility: hidden;}
                     </style>
                     """
         st.markdown(hide_st_style, unsafe_allow_html=True)
