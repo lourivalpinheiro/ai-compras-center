@@ -17,27 +17,22 @@ def chat_page():
     if st.button("Inicializar IA", use_container_width=True):
             carrega_modelo()
     
-
     chat_model = st.session_state.get('chat')
     memoria = st.session_state.get('memoria', memory)
 
     for mensagem in memoria.buffer_as_messages:
-        chat = st.chat_message(mensagem.type)
-        chat.markdown(mensagem.content)
+        chat = st.chat_message(mensagem.type) # 'human' ou 'ai'
+        chat.markdown(mensagem.content) # Exibe a mensagem
 
     input_usuario = st.chat_input("Fale com o Compras IA...")
     if input_usuario:
-        # memoria.chat_memory.add_user_message(input_usuario)
+        memoria.chat_memory.add_user_message(input_usuario)
         chat = st.chat_message('human')
         chat.markdown(input_usuario)
         chat = st.chat_message('ai')
         resposta = chat.write_stream(chat_model.stream(input_usuario))
         memoria.chat_memory.add_ai_message(resposta)
         st.session_state['memoria'] = memoria
-
-
-        
-
 
 def main():
     chat_page()
