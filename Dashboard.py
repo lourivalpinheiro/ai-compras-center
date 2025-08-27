@@ -31,7 +31,7 @@ if "Preço_Unitário" in df.columns:
 #endregion
 
 #region TABS
-tab1, tab2 = st.tabs(["ANÁLISE", "DASHBOARD"])
+tab1, tab2= st.tabs(["ANÁLISE", "DASHBOARD"])
 #endregion
 
 #region ANALYSIS TAB
@@ -146,6 +146,5 @@ with tab2:
         df_tempo = filtered.groupby("Data_Solicitação", as_index=False)["Preço_Unitário"].sum()
         PlotData.bar_plot(df_tempo, x="Data_Solicitação", y="Preço_Unitário", title="Evolução do gasto ao longo do tempo", show=True)
     #endregion
-
     Footer.footer()
 #endregion
