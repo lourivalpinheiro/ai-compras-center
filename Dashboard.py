@@ -12,7 +12,7 @@ import pandas as pd
 
 #region PAGE CONFIGURATION
 Pages(name="Compras Center", icon="📊", page_layout="wide")
-HeaderMenu.hide_menu()
+HeaderMenu.hide_menu_ai_menu()
 #endregion
 
 #region DATA LOADING
