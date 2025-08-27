@@ -14,8 +14,8 @@ def carrega_modelo():
 def chat_page():
     HeaderMenu.hide_menu()
     st.header(":material/robot_2: COMPRAS CENTER AI", divider=True)
-    if st.button("Inicializar IA", use_container_width=True):
-            carrega_modelo()
+    # if st.button("Inicializar IA", use_container_width=True):
+    #         carrega_modelo()
     
     chat_model = st.session_state.get('chat')
     memoria = st.session_state.get('memoria', memory)
@@ -36,6 +36,7 @@ def chat_page():
 
 def main():
     chat_page()
+    carrega_modelo()
 
 if __name__ == '__main__':
     main()
