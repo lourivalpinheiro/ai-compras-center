@@ -38,7 +38,7 @@ def side_bar():
     with st.sidebar:
         if st.button("Inicializar IA", use_container_width=True):
             carrega_modelo()
-        Footer().load_footer()
+        Footer().footer()
 
 
 def main():
