@@ -13,8 +13,9 @@ def carrega_modelo():
     st.session_state['chat'] = chat
 
 def chat_page():
+    HeaderMenu().hide_menu()
     st.header("🤖 COMPRAS CENTER AI", divider=True)
-    HeaderMenu().load_header_menu()
+    
 
     chat_model = st.session_state.get('chat')
     memoria = st.session_state.get('memoria', memory)
