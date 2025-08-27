@@ -14,6 +14,8 @@ def carrega_modelo():
 def chat_page():
     HeaderMenu().hide_menu()
     st.header("🤖 COMPRAS CENTER AI", divider=True)
+    if st.button("Inicializar IA", use_container_width=True):
+            carrega_modelo()
     
 
     chat_model = st.session_state.get('chat')
@@ -33,16 +35,12 @@ def chat_page():
         memoria.chat_memory.add_ai_message(resposta)
         st.session_state['memoria'] = memoria
 
-def side_bar():
-    with st.sidebar:
-        if st.button("Inicializar IA", use_container_width=True):
-            carrega_modelo()
+
         
 
 
 def main():
     chat_page()
-    side_bar()
 
 if __name__ == '__main__':
     main()
