@@ -102,8 +102,7 @@ with tab2:
         with col1:
             DisplayMetrics(
                 ":material/payment: GASTO TOTAL",
-                format_brl(total_gasto),
-                help_icon="Soma total de todas as compras"
+                format_brl(total_gasto)
             )
 
     with col2:
