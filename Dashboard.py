@@ -38,7 +38,7 @@ tab1, tab2= st.tabs(["ANÁLISE", "DASHBOARD"])
 #region ANALYSIS TAB
 with tab1:
     #region HEADER
-    TextElement.set_title("":material/bar_chart:" Análise da planilha de compras")
+    TextElement.set_title(":material/bar_chart: Análise da planilha de compras")
     TextElement.set_caption("**EMPRESA:** MATERIAL DE CONSTRUÇÃO LTDA")
     TextElement.write_text("---")
     #endregion    
