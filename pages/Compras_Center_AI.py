@@ -32,7 +32,7 @@ def chat_page():
         resposta = chat.write_stream(chat_model.stream(input_usuario))
         memoria.chat_memory.add_ai_message(resposta)
         st.session_state['memoria'] = memoria
-
+        
 def main():
     chat_page()
     carrega_modelo()
