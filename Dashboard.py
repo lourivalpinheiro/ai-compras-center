@@ -73,7 +73,7 @@ with tab1:
 #region DASHBOARD TAB
 with tab2:
     #region HEADER
-    TextElement.set_title("📊 Dashboard de Compras")
+    TextElement.set_title(":material/bar_chart: Dashboard de Compras")
     TextElement.set_caption("**EMPRESA:** MATERIAL DE CONSTRUÇÃO LTDA")
     TextElement.write_text("---")
     #endregion
