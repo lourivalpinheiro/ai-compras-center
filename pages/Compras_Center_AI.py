@@ -15,8 +15,6 @@ def chat_page():
     st.set_page_config("Compras Center AI", layout="centered")
     HeaderMenu.hide_menu()
     st.header(":material/robot_2: COMPRAS CENTER AI", divider=True)
-    # if st.button("Inicializar IA", use_container_width=True):
-    #         carrega_modelo()
     
     chat_model = st.session_state.get('chat')
     memoria = st.session_state.get('memoria', memory)
