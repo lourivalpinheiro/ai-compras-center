@@ -14,7 +14,7 @@ def carrega_modelo():
 def chat_page():
     st.set_page_config("Compras Center AI", layout="centered")
     HeaderMenu.hide_menu()
-    st.header(":material/robot_2: COMPRAS CENTER AI", divider=True)
+    st.header(":material/robot_2: COMPRAS CENTER IA", divider=True)
     
     chat_model = st.session_state.get('chat')
     memoria = st.session_state.get('memoria', memory)
@@ -23,7 +23,7 @@ def chat_page():
         chat = st.chat_message(mensagem.type) # 'human' ou 'ai'
         chat.markdown(mensagem.content) # Exibe a mensagem
 
-    input_usuario = st.chat_input("Fale com o Compras IA...")
+    input_usuario = st.chat_input("Fale com a Compras Center IA...")
     if input_usuario:
         memoria.chat_memory.add_user_message(input_usuario)
         chat = st.chat_message('human') # Exibe a mensagem do usuário
